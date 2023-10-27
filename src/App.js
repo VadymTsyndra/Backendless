@@ -1,12 +1,12 @@
 import React, {
- lazy, Suspense, useEffect, useState,
+ lazy, Suspense,
 } from 'react';
 import {
   Routes, Route, NavLink, Navigate,
 } from 'react-router-dom';
 import classNames from 'classnames';
 
-// import tabs from './data/tabs.json';
+import tabs from './data/tabs.json';
 
 import './App.css';
 
@@ -19,14 +19,6 @@ const getLinkClass = ({ isActive }) => classNames('tabs', {
 });
 
 export const App = () => {
-  const [tabs, setTabs] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/backendless/data/tabs.json')
-      .then(res => res.json())
-      .then(data => setTabs(data));
-
-  }, []);
   return (
     <div className="container">
       <div className="block-tabs">
