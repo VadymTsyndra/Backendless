@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import classNames from 'classnames';
 
-import tabs from './api/tabs.json';
+import tabs from './data/tabs.json';
 
 import './App.css';
 
